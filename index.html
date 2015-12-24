@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Angular 2 - Simple Reddit</title>
+    <!-- Libraries -->
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="resources/vendor/semantic.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      System.config({
+        pakcages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app.js')
+        .then(null, console.error.bind(console));
+    </script>
+    <hello-world></hello-world>
+  </body>
+</html>
