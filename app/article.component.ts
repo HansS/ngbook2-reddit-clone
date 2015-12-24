@@ -1,7 +1,9 @@
 import {Component} from 'angular2/core';
+import {Article} from './article';
 
 @Component({
   selector: 'reddit-article',
+  inputs: ['article'],
   host: {
     class: 'row'
   },
@@ -9,7 +11,7 @@ import {Component} from 'angular2/core';
     <div class="four wide column center aligned votes">
       <div class="ui statistic">
         <div class="value">
-          {{ votes }}
+          {{ article.votes }}
         </div>
         <div class="label">
           Points
@@ -17,9 +19,10 @@ import {Component} from 'angular2/core';
       </div>
     </div>
     <div class="twelve wide column">
-      <a class="ui large header" href="{{ link }}">
-        {{ title }}
+      <a class="ui large header" href="{{ article.link }}">
+        {{ article.title }}
       </a>
+      <div class="meta">({{ article.domain() }})</div>
       <ul class="ui big horizontal list voters">
         <li class="item">
           <a href (click)="voteUp()">
@@ -38,23 +41,15 @@ import {Component} from 'angular2/core';
     `
 })
 export class ArticleComponent {
-  votes: number;
-  title: string;
-  link: string;
-
-  constructor() {
-    this.title = 'Angular 2';
-    this.link = 'http://angular.io';
-    this.votes = 10;
-  }
+  public article: Article;
 
   voteUp(): boolean {
-    this.votes += 1;
+    this.article.voteUp();
     return false;
   }
 
   voteDown(): boolean {
-    this.votes -= 1;
+    this.article.voteDown();
     return false;
   }
 }
