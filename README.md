@@ -1,7 +1,7 @@
 # ng-book 2: Simple Reddit-like App
 
-**Note:** The example app from ng-book 2 has been refactored into
-multiple file.
+**Note:** The example app from [ng-book 2][] has been refactored into
+multiple files.
 
 > A simple voting app that resembles a minimal-reddit link voting app in
 > Angular 2.
@@ -56,3 +56,18 @@ us](https://gitter.im/ng-book/ng-book)!
   [Semantic-UI](http://semantic-ui.com/) for the CSS. We've included the
   CSS files from Semantic here.
 - `resources` - this is where we store a few images
+
+
+
+
+# ng-book 2
+
+<a href="https://ng-book.com/2">
+<img align="right" src="https://raw.githubusercontent.com/ng-book/angular2-rxjs-chat/master/app/images/readme/ng-book-2-as-book-cover-pigment.png" alt="ng-book 2" width="148" height="250" />
+</a>
+
+This repo was converted from an example in [ng-book 2][].
+
+<div style="clear:both"></div>
+
+[ng-book 2]: https://ng-book.com/2
